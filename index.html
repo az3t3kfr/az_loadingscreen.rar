@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MD Studio Loading</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="background"></div>
+    <div id="overlay"></div>
+
+    <div class="main-container">
+      <div class="left-panel">
+        <img id="logo" src="" alt="Logo" />
+        <h1 id="server-name">CHARGEMENT</h1>
+        <p id="server-subtitle">BIENVENUE</p>
+      </div>
+
+      <div class="right-panel">
+        <div class="nav-bar">
+          <button class="nav-btn active" data-tab="tab-accueil">ACCUEIL</button>
+          <button class="nav-btn" data-tab="tab-staff">L'ÉQUIPE</button>
+          <button class="nav-btn" data-tab="tab-rules">RÈGLES</button>
+          <button class="nav-btn" data-tab="tab-controls">TOUCHES</button>
+        </div>
+
+        <div class="content-box">
+          <div id="tab-accueil" class="tab-content active">
+            <h2>Bienvenue en ville</h2>
+            <p>
+              Préparez-vous à rejoindre une expérience unique. Profitez de ce
+              temps de chargement pour vérifier vos touches ou lire nos règles
+              essentielles.
+            </p>
+
+            <div id="website-container" style="display: none; margin-top: 30px">
+              <button id="website-btn" class="action-btn">
+                🌐 Visiter notre site internet
+              </button>
+            </div>
+          </div>
+
+          <div id="tab-staff" class="tab-content">
+            <h2>Hiérarchie du Staff</h2>
+            <div class="staff-grid" id="staff-container"></div>
+          </div>
+
+          <div id="tab-rules" class="tab-content">
+            <h2>Règlement Général</h2>
+            <ul class="rules-list" id="rules-container"></ul>
+          </div>
+
+          <div id="tab-controls" class="tab-content">
+            <h2>Contrôles Principaux</h2>
+            <div class="controls-grid" id="controls-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading-footer">
+      <div class="progress-wrapper">
+        <div id="progress-bar"></div>
+      </div>
+      <div class="loading-text">
+        <span>Chargement des ressources...</span>
+        <span id="progress-percent">0%</span>
+      </div>
+    </div>
+
+    <audio id="audio-player" autoplay loop></audio>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
